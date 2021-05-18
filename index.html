@@ -1,475 +1,233 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-  <style>
-    .img:hover{
-      width: 190px;
-      height: 50px;
-      border: 100px solid #fff;
-      -moz-box-shadow: 100px 600px 100px #ccc;
-      -webkit-box-shadow: 10px 600px 500px #ccc;
-      box-shadow: 2px 6px 5px #ccc;
-      -moz-border-radius: 100px;
-      -webkit-border-radius: 100px;
-      border-radius: 10px;
-     border: 2px solid steelblue;
-
-     
-      
-    }
-
-    
-
-
-    .column {
-      float: left;
-      width: 45%;
-      padding: 2px 2px;
-      flex: 0%;
-      margin-top: 1px;
-
-    }
-  
-    
-
-  
-
-
-
-    /* Clearfix (clear floats) */
-    .row::after {
-      content: "";
-      clear: both;
-      display: table;
-
-    }
-
-    .row1::after {
-      content: "";
-      clear: both;
-      display: table;
-    }
-
-    .row2::after {
-      content: "";
-      clear: both;
-      display: table;
-    }
-
-    .row3::after {
-      content: "";
-      clear: both;
-      display: table;
-    }
-
-    .row4::after {
-      content: "";
-      clear: both;
-      display: table;
-    }
-
-    .row5::after {
-      content: "";
-      clear: both;
-      display: table;
-    }
-
-    .row6::after {
-      content: "";
-      clear: both;
-      display: table;
-    }
-
-    
-  </style>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        img {
+            vertical-align: middle;
+            max-width: 30px;
+            width: 27px;
+            max-height: 100%;
+            margin: 0%;
+            padding-right: 2px;
+        }
+        button {
+            padding: 2px;
+            margin: 0.5% 1% 0% 1%;
+            width: 48%;
+            max-width: 48%;
+            height: 50px;
+            font-size: 11px;
+            font-weight: bold;
+            border-radius: 10px;
+            border: 2px solid steelblue;
+            -webkit-border-radius: 10px;
+            background-color: white;
+        }
+        button:hover {
+            -webkit-box-shadow: 100px 600px 500px #ccc;
+            box-shadow: 2px 6px 5px #ccc;
+            -moz-box-shadow: 100px 600px 100px #ccc;
+            border: 3px solid #385072;
+            -moz-border-radius: 10px;
+        }
+        .left {
+            float: left;
+        }
+        .right {
+            float: right;
+        }
+        button {
+            padding: 5px;
+        }
+    </style>
 </head>
-
 <body>
-
-
-  <script type="text/javascript">
-
-    function need() {
-      window.parent.postMessage(
-        JSON.stringify({
-          event_code: "ym-client-event",
-          data: "id need for speed no limits"
-        }),
-        "*"
-      );
-    }
-    function genshin() {
-      window.parent.postMessage(
-        JSON.stringify({
-          event_code: "ym-client-event",
-          data: "i want Genshin Impact ID"
-        }),
-        "*"
-      );
-    }
-
-
-    function Zepeto() {
-      window.parent.postMessage(
-        JSON.stringify({
-          event_code: "ym-client-event",
-          data: "I want Zepeto code"
-        }),
-        "*"
-      );
-    }
-
-    function Runeterra() {
-      window.parent.postMessage(
-        JSON.stringify({
-          event_code: "ym-client-event",
-          data: "Riot ID Legends Of Runeterra"
-        }),
-        "*"
-      );
-    }
-
-    function turbo() {
-      window.parent.postMessage(
-        JSON.stringify({
-          event_code: "ym-client-event",
-          data: "Find Turbo VPN ID"
-        }),
-        "*"
-      );
-    }
-
-    function one() {
-      window.parent.postMessage(
-        JSON.stringify({
-          event_code: "ym-client-event",
-          data: "One Punch Man ID"
-        }),
-        "*"
-      );
-    }
-
-
-    function astral() {
-      window.parent.postMessage(
-        JSON.stringify({
-          event_code: "ym-client-event",
-          data: "find my Astral Guardians User ID"
-        }),
-        "*"
-      );
-    }
-
-    function blockman() {
-      window.parent.postMessage(
-        JSON.stringify({
-          event_code: "ym-client-event",
-          data: "find my Astral Guardians User ID"
-        }),
-        "*"
-      );
-    }
-
-    function tj() {
-      window.parent.postMessage(
-        JSON.stringify({
-          event_code: "ym-client-event",
-          data: "saya ingin ID tom and jerry chase"
-        }),
-        "*"
-      );
-    }
-
-
-
-
-    function life() {
-      window.parent.postMessage(
-        JSON.stringify({
-          event_code: "ym-client-event",
-          data: "Bantu saya untuk menemukan ID Pengguna Life After saya"
-        }),
-        "*"
-      );
-    }
-
-   
-
-
-    function ros() {
-      window.parent.postMessage(
-        JSON.stringify({
-          event_code: "ym-client-event",
-          data: "Bagaimana cara saya menemukan ID Rules of Survival"
-        }),
-        "*"
-      );
-
-    }
-
-    function rag() {
-      window.parent.postMessage(
-        JSON.stringify({
-          event_code: "ym-client-event",
-          data: "Bantu saya untuk menemukan ID Ragnarok M"
-        }),
-        "*"
-      );
-
-    }
-
-
-
-    
-
-    function legends() {
-      window.parent.postMessage(
-        JSON.stringify({
-          event_code: "ym-client-event",
-          data: "Where Can I Find My Mobile Legends User ID"
-        }),
-        "*"
-      );
-
-    }
-
-    function aov() {
-      window.parent.postMessage(
-        JSON.stringify({
-          event_code: "ym-client-event",
-          data: "Bantu saya untuk menemukan ID AOV saya"
-        }),
-        "*"
-      );
-
-    }
-
-
-
-
-
-
-
-  </script>
-
-  <h4 style="font-family:Geneva ;">Please choose from the options below 💁‍♀
-  </h4>
-
-
-
-
-
-  <center>
-
-    <div class="row">
-      <div class="column">
-        <div class="img">
-
-
-
-
-          <input type= "image"  name="submit" src="https://cdn.yellowmessenger.com/3e1pAx0bgiaQ1621267892338.png"
-             border="0"  alt="Submit" style="width: 50px;height: 50px;vertical-align:middle; " onclick="need()"/> &emsp; <span >Need For Speed No Limits</span>
-
-       
-      </div>
-      </div> 
-
-
-
-      <div class="column">
-        <div class="img">
-          <input type="image" name="submit" src="https://cdn.yellowmessenger.com/cZFvA5OgTgCU1621268392829.png"
-            border="0" alt="Submit" style="width: 50px;height: 50px;vertical-align:middle;"  onclick="genshin()"/>&emsp;<span >Genshin Impact</span> 
-
-
-        </div>
-      </div>
-
-  </center>
-
-
-
-
-  <center>
-
-    <div class="row1">
-      <div class="column">
-        <div class="img">
-
-          <input type="image" name="submit" src="https://cdn.yellowmessenger.com/lZE6Ek9w752k1621268517992.png"
-            border="0" alt="Submit" style="width: 50px;height: 50px;vertical-align:middle;"  onclick="Zepeto()"/>&emsp;<span >Zepeto</span> 
-
-       
-        </div>
-      </div>
-
-
-
-      <div class="column">
-        <div class="img">
-          <input type="image" name="submit" src="https://cdn.yellowmessenger.com/gB9kc7REl9ag1621268687340.png"
-            border="0" alt="Submit" style="width: 50px;height: 50px;vertical-align:middle;"  onclick="Runeterra()"/>&emsp;<span >Legends Of Runeterra</span> 
-
-        </div>
-      </div>
-
-  </center>
-
-
-
-
-
-
-
-  <center>
-
-    <div class="row2">
-      <div class="column">
-        <div class="img">
-
-          <input type="image" name="submit" src="https://cdn.yellowmessenger.com/8Hc0HGQAk7z81621268850647.png"
-            border="0" alt="Submit" style="width: 50px;height: 50px;height: 50px;vertical-align:middle;"  onclick="turbo()"/>&emsp;<span > Turbo VPN</span> 
-
-        </div>
-      </div>
-
-
-
-      <div class="column">
-        <div class="img">
-          <input type="image" name="submit" src="https://cdn.yellowmessenger.com/3owsfOL0nvk21621268951689.png"
-            border="0" alt="Submit" style="width: 50px;height: 50px;height: 50px;vertical-align:middle;"  onclick="one()"/>&emsp;<span > One Punch Man</span> 
-
-
-        </div>
-      </div>
-
-  </center>
-
-
-
-
-
-
-
-
-  <center>
-
-    <div class="row3">
-      <div class="column">
-        <div class="img">
-
-          <input type="image" name="submit" src="https://cdn.yellowmessenger.com/4rsuQkAqY6Ix1621269166526.png"
-            border="0" alt="Submit" style="width: 50px;height: 50px;height: 50px;vertical-align:middle;"  onclick="astral()"/>&emsp;<span >Astral Guardians</span> 
-
-        </div>
-      </div>
-
-
-
-      <div class="column">
-        <div class="img">
-          <input type="image" name="submit" src="https://cdn.yellowmessenger.com/pXQVfCxbv5g71621270195885.png"
-            border="0" alt="Submit" style="width: 50px;height: 50px;height: 50px;vertical-align:middle;"  onclick="ros()"/>&emsp;<span >Rules of Survival</span> 
-
-        </div>
-      </div>
-
-  </center>
-
-
-
-
-
-
-
-
-  <center>
-
-    <div class="row4">
-      <div class="column">
-        <div class="img">
-
-          <input type="image" name="submit" src="https://cdn.yellowmessenger.com/Ous65PrfVcCL1621269349298.png"
-            border="0" alt="Submit" style="width: 50px;height: 50px;height: 50px;vertical-align:middle;"  onclick="blockman()"/>&emsp;<span >Blockman Go</span> 
-
-        </div>
-      </div>
-
-
-
-      <div class="column">
-        <div class="img">
-          <input type="image" name="submit" src="https://cdn.yellowmessenger.com/YRWeklRFAUUP1621269527394.png"
-            border="0" alt="Submit" style="width: 50px;height: 50px;height: 50px;vertical-align:middle;"  onclick="tj()"/>&emsp;<span >Tom and Jerry: Chase</span> 
-
-
-        </div>
-      </div>
-
-  </center>
-
-
-
- <center>
-
-    <div class="row5">
-      <div class="column">
-        <div class="img">
-
-          <input type="image" name="submit" src="https://cdn.yellowmessenger.com/kvXCObLMi3zo1621263228322.png"
-            border="0" alt="Submit"style="width: 50px;height: 50px;height: 50px;vertical-align:middle;"  onclick="aov()"/>&emsp;<span >AOV</span>
-
-
-        </div>
-      </div>
-
-
-
-      <div class="column">
-        <div class="img">
-          <input type="image" name="submit" src="https://cdn.yellowmessenger.com/FuXxevambEXI1621263064445.png"
-            border="0" alt="Submit" style="width: 50px;height: 50px;height: 50px;vertical-align:middle;"  onclick="legends()"/>&emsp;<span >Mobile Legends</span>
-
-        </div>
-      </div>
-
-  </center>
-
-
-
- <center>
-
-    <div class="row6">
-      <div class="column">
-        <div class="img">
-
-          <input type="image" name="submit" src="https://cdn.yellowmessenger.com/xm9008Qrc5MG1621269863150.png"
-            border="0" alt="Submit" style="width: 50px;height: 50px;height: 50px;vertical-align:middle;"  onclick="life()"/>&emsp;<span >Life After</span> 
-
-        </div>
-      </div>
-
-
-
-      <div class="column">
-        <div class="img">
-          <input type="image" name="submit" src="https://cdn.yellowmessenger.com/XATl6jiNXKzw1621270097191.png"
-            border="0" alt="Submit" style="width: 50px;height: 50px;height: 50px;vertical-align:middle;"  onclick="rag()"/>&emsp;<span >Ragnarok M</span> 
-
-
-        </div>
-      </div>
-
-  </center>
-
-
-
- 
- 
-
+    <script type="text/javascript">
+        function need() {
+            window.parent.postMessage(
+                JSON.stringify({
+                    event_code: "ym-client-event",
+                    data: "id need for speed no limits"
+                }),
+                "*"
+            );
+        }
+        function genshin() {
+            window.parent.postMessage(
+                JSON.stringify({
+                    event_code: "ym-client-event",
+                    data: "i want Genshin Impact ID"
+                }),
+                "*"
+            );
+        }
+        function Zepeto() {
+            window.parent.postMessage(
+                JSON.stringify({
+                    event_code: "ym-client-event",
+                    data: "I want Zepeto code"
+                }),
+                "*"
+            );
+        }
+        function Runeterra() {
+            window.parent.postMessage(
+                JSON.stringify({
+                    event_code: "ym-client-event",
+                    data: "Riot ID Legends Of Runeterra"
+                }),
+                "*"
+            );
+        }
+        function turbo() {
+            window.parent.postMessage(
+                JSON.stringify({
+                    event_code: "ym-client-event",
+                    data: "Find Turbo VPN ID"
+                }),
+                "*"
+            );
+        }
+        function one() {
+            window.parent.postMessage(
+                JSON.stringify({
+                    event_code: "ym-client-event",
+                    data: "One Punch Man ID"
+                }),
+                "*"
+            );
+        }
+        function astral() {
+            window.parent.postMessage(
+                JSON.stringify({
+                    event_code: "ym-client-event",
+                    data: "find my Astral Guardians User ID"
+                }),
+                "*"
+            );
+        }
+        function blockman() {
+            window.parent.postMessage(
+                JSON.stringify({
+                    event_code: "ym-client-event",
+                    data: "find my Astral Guardians User ID"
+                }),
+                "*"
+            );
+        }
+        function tj() {
+            window.parent.postMessage(
+                JSON.stringify({
+                    event_code: "ym-client-event",
+                    data: "saya ingin ID tom and jerry chase"
+                }),
+                "*"
+            );
+        }
+        function life() {
+            window.parent.postMessage(
+                JSON.stringify({
+                    event_code: "ym-client-event",
+                    data: "Bantu saya untuk menemukan ID Pengguna Life After saya"
+                }),
+                "*"
+            );
+        }
+        function ros() {
+            window.parent.postMessage(
+                JSON.stringify({
+                    event_code: "ym-client-event",
+                    data: "Bagaimana cara saya menemukan ID Rules of Survival"
+                }),
+                "*"
+            );
+        }
+        function rag() {
+            window.parent.postMessage(
+                JSON.stringify({
+                    event_code: "ym-client-event",
+                    data: "Bantu saya untuk menemukan ID Ragnarok M"
+                }),
+                "*"
+            );
+        }
+        function legends() {
+            window.parent.postMessage(
+                JSON.stringify({
+                    event_code: "ym-client-event",
+                    data: "Where Can I Find My Mobile Legends User ID"
+                }),
+                "*"
+            );
+        }
+        function aov() {
+            window.parent.postMessage(
+                JSON.stringify({
+                    event_code: "ym-client-event",
+                    data: "Bantu saya untuk menemukan ID AOV saya"
+                }),
+                "*"
+            );
+        }
+    </script>
+    <h4 style="font-family:Geneva ;">Please choose from the options below 💁‍♀</h4>
+    <button type="button" onclick="need()" class="left primary-btn col-xs-11 text-left">
+        <img src="https://cdn.yellowmessenger.com/3e1pAx0bgiaQ1621267892338.png" alt="Place Holder" />
+        Need For Speed &emsp; &emsp; &emsp; &emsp; &emsp; No Limits
+    </button>
+    <button type="button" onclick="genshin()" class="right primary-btn col-xs-11 text-left">
+        <img src="https://cdn.yellowmessenger.com/cZFvA5OgTgCU1621268392829.png" alt="Place Holder" />
+        Genshin Impact
+    </button>
+    <button type="button" onclick="Zepeto()" class="left primary-btn col-xs-11 text-left">
+        <img src="https://cdn.yellowmessenger.com/lZE6Ek9w752k1621268517992.png" alt="Place Holder" />
+        Zepeto
+    </button>
+    <button type="button" onclick="Runeterra()" class="right primary-btn col-xs-11 text-left">
+        <img src="https://cdn.yellowmessenger.com/gB9kc7REl9ag1621268687340.png" alt="Place Holder" />
+        Legends Of &emsp;&emsp;&emsp;&emsp;&emsp;Runeterra
+    </button>
+    <button type="button" onclick="turbo()" class="left primary-btn col-xs-11 text-left">
+        <img src="https://cdn.yellowmessenger.com/8Hc0HGQAk7z81621268850647.png" alt="Place Holder" />
+        Turbo VPN
+    </button>
+    <button type="button" onclick="one()" class="right primary-btn col-xs-11 text-left">
+        <img src="https://cdn.yellowmessenger.com/3owsfOL0nvk21621268951689.png" alt="Place Holder" />
+        One Punch Man
+    </button>
+    <button type="button" onclick="astral()" class="left primary-btn col-xs-11 text-left">
+        <img src="https://cdn.yellowmessenger.com/4rsuQkAqY6Ix1621269166526.png" alt="Place Holder" />
+        Astral Guardians
+    </button>
+    <button type="button" onclick="ros()" class="right primary-btn col-xs-11 text-left">
+        <img src="https://cdn.yellowmessenger.com/pXQVfCxbv5g71621270195885.png" alt="Place Holder" />
+        Rules of Survival
+    </button>
+    <button type="button" onclick="blockman()" class="left primary-btn col-xs-11 text-left">
+        <img src="https://cdn.yellowmessenger.com/Ous65PrfVcCL1621269349298.png" alt="Place Holder" />
+        Blockman Go
+    </button>
+    <button type="button" onclick="tj()" class="right primary-btn col-xs-11 text-left">
+        <img src="https://cdn.yellowmessenger.com/YRWeklRFAUUP1621269527394.png" alt="Place Holder" />
+        Tom and Jerry: &emsp;&emsp;&emsp;&emsp;&emsp;Chase
+    </button>
+    <button type="button" onclick="aov()" class="left primary-btn col-xs-11 text-left">
+        <img src="https://cdn.yellowmessenger.com/kvXCObLMi3zo1621263228322.png" alt="Place Holder" />
+        AOV
+    </button>
+    <button type="button" onclick="legends()" class="right primary-btn col-xs-11 text-left">
+        <img src="https://cdn.yellowmessenger.com/FuXxevambEXI1621263064445.png" alt="Place Holder" />
+        Mobile Legends
+    </button>
+    <button type="button" onclick="life()" class="left primary-btn col-xs-11 text-left">
+        <img src="https://cdn.yellowmessenger.com/xm9008Qrc5MG1621269863150.png" alt="Place Holder" />
+        Life After
+    </button>
+    <button type="button" onclick="rag()" class="right primary-btn col-xs-11 text-left">
+        <img src="https://cdn.yellowmessenger.com/XATl6jiNXKzw1621270097191.png" alt="Place Holder" />
+        Ragnarok M
+    </button>
 </body>
-
 </html>
