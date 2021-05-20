@@ -3,6 +3,8 @@
 <head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.6.0/qs.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <style>
          body {
           font-family:'Lato',sans-serif
@@ -53,6 +55,13 @@
 </head>
 <body>
     <script type="text/javascript">
+        
+        
+         window.addEventListener('load', (event) => {
+            
+            const { title } = Qs.parse(location.search, { ignoreQueryPrefix: true })
+        document.getElementById("heading").innerHTML = title 
+    })
         function need() {
             window.parent.postMessage(
                 JSON.stringify({
@@ -180,7 +189,7 @@
             );
         }
     </script>
-    <h4>Please choose from the options below 💁‍♀</h4>
+    <h4 id = "heading">Please choose from the options below 💁‍♀</h4>
 
 
 
