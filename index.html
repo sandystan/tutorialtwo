@@ -1,10 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"
+        integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+
+
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.6.0/qs.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+
+
+
+
     <style>
          body {
           font-family:'Lato',sans-serif
@@ -45,7 +56,7 @@
             border: 2px solid steelblue;
             -webkit-border-radius: 10px;
             background-color: white;
-            font-family:'Lato',sans-serif"
+            font-family:'Lato',sans-serif
         }
         button:hover {
             -webkit-box-shadow: 100px 600px 500px #ccc;
@@ -70,6 +81,57 @@
         
         
          window.addEventListener('load', (event) => {
+
+                      void function $getLines($) {
+                function countLines($element) {
+                    var lines = 0;
+                    var greatestOffset = void 0;
+                    $element.find('character').each(function () {
+                        if (!greatestOffset || this.offsetTop > greatestOffset) {
+                            greatestOffset = this.offsetTop;
+                            ++lines;
+                        }
+                    });
+                    return lines;
+                }
+                $.fn.getLines = function $getLines() {
+                    var lines = 0;
+                    var clean = this;
+                    var dirty = this.clone();
+                    (function wrapCharacters(fragment) {
+                        var parent = fragment;
+                        $(fragment).contents().each(function () {
+                            if (this.nodeType === Node.ELEMENT_NODE) {
+                                wrapCharacters(this);
+                            }
+                            else if (this.nodeType === Node.TEXT_NODE) {
+                                void function replaceNode(text) {
+                                    var characters = document.createDocumentFragment();
+                                    text.nodeValue.replace(/[\s\S]/gm, function wrapCharacter(character) {
+                                        characters.appendChild($('<character>' + character + '</>')[0]);
+                                    });
+                                    parent.replaceChild(characters, text);
+                                }(this);
+                            }
+                        });
+                    }(dirty[0]));
+                    clean.replaceWith(dirty);
+                    lines = countLines(dirty);
+                    dirty.replaceWith(clean);
+                    return lines;
+                };
+            }(jQuery);
+            $('span').each(function () {
+                console.log($(this).getLines());
+                if($(this).getLines() == 1){
+                    // var parentTag = $( this ).parent().get( 0 ).tagName;
+                    // console.log(parentTag)
+                    $( this ).prev().css( "float", "none" )
+                }
+            })
+
+
+                     
             
             const { title } = Qs.parse(location.search, { ignoreQueryPrefix: true })
         document.getElementById("heading").innerHTML = title 
@@ -220,79 +282,81 @@
 
 
     <button type="button" onclick="legends()" class="right primary-btn col-xs-11 text-left">
-        <img src="https://cdn.yellowmessenger.com/FuXxevambEXI1621263064445.png" alt="Place Holder" />
-        Mobile Legends
+        <img src="https://cdn.yellowmessenger.com/FuXxevambEXI1621263064445.png" alt="Place Holder" /><span> Mobile Legends</span>
+       
     </button>
 
     <button type="button" onclick="astral()" class="left primary-btn col-xs-11 text-left">
-        <img src="https://cdn.yellowmessenger.com/4rsuQkAqY6Ix1621269166526.png" alt="Place Holder" />
-        Astral Guardians
+        <img src="https://cdn.yellowmessenger.com/4rsuQkAqY6Ix1621269166526.png" alt="Place Holder" /><span> Astral Guardians</span>
+        
     </button>
 
 
 
     <button type="button" onclick="need()" class="left primary-btn col-xs-11 text-left">
-        <img src="https://cdn.yellowmessenger.com/3e1pAx0bgiaQ1621267892338.png" alt="Place Holder" />
-        Need For Speed</br> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp; No Limits
+        <img src="https://cdn.yellowmessenger.com/3e1pAx0bgiaQ1621267892338.png" alt="Place Holder" /><span> Need For Speed No Limits</span>
+        
+        
     </button>
 
 
     <button type="button" onclick="Zepeto()" class="left primary-btn col-xs-11 text-left">
-        <img src="https://cdn.yellowmessenger.com/lZE6Ek9w752k1621268517992.png" alt="Place Holder" />
-        Zepeto
+        <img src="https://cdn.yellowmessenger.com/lZE6Ek9w752k1621268517992.png" alt="Place Holder" /><span> Zepeto</span>
+        
     </button>
 
     <button type="button" onclick="blockman()" class="left primary-btn col-xs-11 text-left">
-        <img src="https://cdn.yellowmessenger.com/Ous65PrfVcCL1621269349298.png" alt="Place Holder" />
-        Blockman Go
+        <img src="https://cdn.yellowmessenger.com/Ous65PrfVcCL1621269349298.png" alt="Place Holder" /><span> Blockman Go</span>
+       
     </button>
 
     <button type="button" onclick="aov()" class="left primary-btn col-xs-11 text-left">
-        <img src="https://cdn.yellowmessenger.com/kvXCObLMi3zo1621263228322.png" alt="Place Holder" />
-        AOV
+        <img src="https://cdn.yellowmessenger.com/kvXCObLMi3zo1621263228322.png" alt="Place Holder" /><span> AOV</span>
+       
     </button>
 
     <button type="button" onclick="turbo()" class="left primary-btn col-xs-11 text-left">
-        <img src="https://cdn.yellowmessenger.com/8Hc0HGQAk7z81621268850647.png" alt="Place Holder" />
-        Turbo VPN
+        <img src="https://cdn.yellowmessenger.com/8Hc0HGQAk7z81621268850647.png" alt="Place Holder" /><span>  Turbo VPN</span>
+       
     </button>
 
 
     <button type="button" onclick="genshin()" class="right primary-btn col-xs-11 text-left">
-        <img src="https://cdn.yellowmessenger.com/cZFvA5OgTgCU1621268392829.png" alt="Place Holder" />
-        Genshin Impact
+        <img src="https://cdn.yellowmessenger.com/cZFvA5OgTgCU1621268392829.png" alt="Place Holder" /><span> Genshin Impact</span>
+        
     </button>
 
     <button type="button" onclick="life()" class="left primary-btn col-xs-11 text-left">
-        <img src="https://cdn.yellowmessenger.com/xm9008Qrc5MG1621269863150.png" alt="Place Holder" />
-        Life After
+        <img src="https://cdn.yellowmessenger.com/xm9008Qrc5MG1621269863150.png" alt="Place Holder" /><span> Life After</span>
+        
     </button>
 
     <button type="button" onclick="rag()" class="right primary-btn col-xs-11 text-left">
-        <img src="https://cdn.yellowmessenger.com/XATl6jiNXKzw1621270097191.png" alt="Place Holder" />
-        Ragnarok M
+        <img src="https://cdn.yellowmessenger.com/XATl6jiNXKzw1621270097191.png" alt="Place Holder" /><span> Ragnarok M</span>
+       
     </button>
 
     <button type="button" onclick="ros()" class="right primary-btn col-xs-11 text-left">
-        <img src="https://cdn.yellowmessenger.com/pXQVfCxbv5g71621270195885.png" alt="Place Holder" />
-        Rules of Survival
+        <img src="https://cdn.yellowmessenger.com/pXQVfCxbv5g71621270195885.png" alt="Place Holder" /><span> Rules of Survival</span>
+        
     </button>
 
     <button type="button" onclick="tj()" class="right primary-btn col-xs-11 text-left">
-        <img src="https://cdn.yellowmessenger.com/YRWeklRFAUUP1621269527394.png" alt="Place Holder" />
-        Tom and Jerry: </br> &emsp;&emsp; &emsp;&emsp;&emsp;&emsp; Chase
+        <img src="https://cdn.yellowmessenger.com/YRWeklRFAUUP1621269527394.png" alt="Place Holder" /><span>  Tom and Jerry :Chase</span>
+       
     </button>
 
     <button type="button" onclick="one()" class="right primary-btn col-xs-11 text-left">
-        <img src="https://cdn.yellowmessenger.com/3owsfOL0nvk21621268951689.png" alt="Place Holder" />
-        One Punch Man
+        <img src="https://cdn.yellowmessenger.com/3owsfOL0nvk21621268951689.png" alt="Place Holder" /><span>  One Punch Man</span>
+       
     </button>
 
 
     
     <button type="button" onclick="Runeterra()" class="right primary-btn col-xs-11 text-left">
-        <img src="https://cdn.yellowmessenger.com/gB9kc7REl9ag1621268687340.png" alt="Place Holder" />
-        Legends Of </br> &emsp;&emsp; &emsp;&emsp; &emsp; Runeterra
+        <img src="https://cdn.yellowmessenger.com/gB9kc7REl9ag1621268687340.png" alt="Place Holder" /><span> Legends Of Runeterra</span>
+       
+       
     </button>
 
     
